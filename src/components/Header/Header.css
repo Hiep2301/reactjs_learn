@@ -1,0 +1,40 @@
+/* Header.css */
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+li:hover {
+  color: #f39c12;
+  transition: color 0.3s ease;
+}
