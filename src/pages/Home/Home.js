@@ -6,9 +6,11 @@ export default function Home() {
   const values = ["abc", "xyz"];
   const [index, setIndex] = useState(0);
   const [blogs, setBlogs] = useState([
-    { id: 1, title: "Blog 1" },
-    { id: 2, title: "Blog 2" },
-    { id: 3, title: "Blog 3" },
+    { id: 1, title: "Blog 1", author: "Hiệp" },
+    { id: 2, title: "Blog 2", author: "Hiệp" },
+    { id: 3, title: "Blog 3", author: "Hải" },
+    { id: 4, title: "Blog 4", author: "Hải" },
+    { id: 5, title: "Blog 5", author: "Huy" },
   ]);
 
   const handleClick = () => {
@@ -31,7 +33,14 @@ export default function Home() {
       <p>{values[index]}</p>
       <button onClick={handleClick}>Click me</button>
 
-      <BlogList blogs={blogs} />
+      <BlogList
+        blogs={blogs.filter((item) => item.author === "Hiệp")}
+        author="A"
+      />
+      <BlogList
+        blogs={blogs.filter((item) => item.author === "Huy")}
+        author="B"
+      />
     </div>
   );
 }

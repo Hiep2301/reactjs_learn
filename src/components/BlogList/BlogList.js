@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function BlogList({ blogs }) {
+export default function BlogList({ blogs, author }) {
   const navigate = useNavigate();
 
   const onBlogClick = (blog) => {
@@ -14,8 +14,11 @@ export default function BlogList({ blogs }) {
         blogs.map((blog, index) => (
           <div key={index}>
             <ul>
+              <p>
+                <b>{author}</b>
+              </p>
               <li onClick={() => onBlogClick(blog)}>
-                {blog.id} - {blog.title}
+                {blog.author} - {blog.title}
               </li>
             </ul>
           </div>

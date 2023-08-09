@@ -9,7 +9,9 @@ export default function BlogDetails() {
 
   return (
     <div>
-      <h2>{blog.title}</h2>
+      <h2>
+        {blog.author} - {blog.title}
+      </h2>
       {/* You can add more blog details here */}
     </div>
   );
